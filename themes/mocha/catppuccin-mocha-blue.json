@@ -1,0 +1,19 @@
+{
+  "palette:catppuccinMochaBlue:1725866092314": {
+    "name": "Catppuccin Mocha Blue ",
+    "black": "205,214,244",
+    "white": "24,24,37",
+    "white-on-dark": "127,132,156",
+    "navy": "30,30,46",
+    "red": "243,139,168",
+    "orange": "250,179,135",
+    "yellow": "249,226,175",
+    "green": "166,227,161",
+    "blue": "116,199,236",
+    "purple": "203,166,247",
+    "pink": "245,194,231",
+    "accent": "137,180,250",
+    "secondary-accent": "49,50,68",
+    "follow": "137,180,250"
+  }
+}

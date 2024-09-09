@@ -1,0 +1,19 @@
+{
+  "palette:catppuccinMacchiatoMaroon:1725866092314": {
+    "name": "Catppuccin Macchiato Maroon ",
+    "black": "202,211,245",
+    "white": "30,32,48",
+    "white-on-dark": "128,135,162",
+    "navy": "36,39,58",
+    "red": "237,135,150",
+    "orange": "245,169,127",
+    "yellow": "238,212,159",
+    "green": "166,218,149",
+    "blue": "125,196,228",
+    "purple": "198,160,246",
+    "pink": "245,189,230",
+    "accent": "238,153,160",
+    "secondary-accent": "54,58,79",
+    "follow": "238,153,160"
+  }
+}

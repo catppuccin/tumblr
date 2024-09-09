@@ -1,0 +1,19 @@
+{
+  "palette:catppuccinFrappéSky:1725866092314": {
+    "name": "Catppuccin Frappé Sky ",
+    "black": "198,208,245",
+    "white": "41,44,60",
+    "white-on-dark": "131,139,167",
+    "navy": "48,52,70",
+    "red": "231,130,132",
+    "orange": "239,159,118",
+    "yellow": "229,200,144",
+    "green": "166,209,137",
+    "blue": "133,193,220",
+    "purple": "202,158,230",
+    "pink": "244,184,228",
+    "accent": "153,209,219",
+    "secondary-accent": "65,69,89",
+    "follow": "153,209,219"
+  }
+}

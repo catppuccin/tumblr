@@ -1,0 +1,19 @@
+{
+  "palette:catppuccinLatteYellow:1725866092314": {
+    "name": "Catppuccin Latte Yellow ",
+    "black": "76,79,105",
+    "white": "230,233,239",
+    "white-on-dark": "140,143,161",
+    "navy": "239,241,245",
+    "red": "210,15,57",
+    "orange": "254,100,11",
+    "yellow": "223,142,29",
+    "green": "64,160,43",
+    "blue": "32,159,181",
+    "purple": "136,57,239",
+    "pink": "234,118,203",
+    "accent": "223,142,29",
+    "secondary-accent": "204,208,218",
+    "follow": "223,142,29"
+  }
+}

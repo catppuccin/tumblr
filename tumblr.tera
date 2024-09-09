@@ -1,0 +1,28 @@
+---
+whiskers:
+    version: 2.5.0
+    matrix:
+        - accent
+        - flavor
+    filename: "themes/{{ flavor.identifier }}/catppuccin-{{ flavor.identifier }}-{{ accent }}.json"
+---
+{%- set palette = flavor.colors -%}
+{
+  "palette:catppuccin{{ flavor.name }}{{ accent | capitalize }}:1725866092314": {
+    "name": "Catppuccin {{ flavor.name }} {{ accent | capitalize }} ",
+    "black": "{{ palette.text.rgb.r }},{{ palette.text.rgb.g }},{{ palette.text.rgb.b }}",
+    "white": "{{ palette.mantle.rgb.r }},{{ palette.mantle.rgb.g }},{{ palette.mantle.rgb.b }}",
+    "white-on-dark": "{{ palette.overlay1.rgb.r }},{{ palette.overlay1.rgb.g }},{{ palette.overlay1.rgb.b }}",
+    "navy": "{{ palette.base.rgb.r }},{{ palette.base.rgb.g }},{{ palette.base.rgb.b }}",
+    "red": "{{ palette.red.rgb.r }},{{ palette.red.rgb.g }},{{ palette.red.rgb.b }}",
+    "orange": "{{ palette.peach.rgb.r }},{{ palette.peach.rgb.g }},{{ palette.peach.rgb.b }}",
+    "yellow": "{{ palette.yellow.rgb.r }},{{ palette.yellow.rgb.g }},{{ palette.yellow.rgb.b }}",
+    "green": "{{ palette.green.rgb.r }},{{ palette.green.rgb.g }},{{ palette.green.rgb.b }}",
+    "blue": "{{ palette.sapphire.rgb.r }},{{ palette.sapphire.rgb.g }},{{ palette.sapphire.rgb.b }}",
+    "purple": "{{ palette.mauve.rgb.r }},{{ palette.mauve.rgb.g }},{{ palette.mauve.rgb.b }}",
+    "pink": "{{ palette.pink.rgb.r }},{{ palette.pink.rgb.g }},{{ palette.pink.rgb.b }}",
+    "accent": "{{ palette[accent].rgb.r }},{{ palette[accent].rgb.g }},{{ palette[accent].rgb.b }}",
+    "secondary-accent": "{{ palette.surface0.rgb.r }},{{ palette.surface0.rgb.g }},{{ palette.surface0.rgb.b }}",
+    "follow": "{{ palette[accent].rgb.r }},{{ palette[accent].rgb.g }},{{ palette[accent].rgb.b }}"
+  }
+}
