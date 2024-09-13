@@ -9,7 +9,7 @@ whiskers:
 {%- set palette = flavor.colors -%}
 {
   "palette:catppuccin{{ flavor.name }}{{ accent | capitalize }}:1725866092314": {
-    "name": "Catppuccin {{ flavor.name }} {{ accent | capitalize }} ",
+    "name": "Catppuccin {{ flavor.name }} {{ accent | capitalize }}",
     "black": "{{ text.rgb.r }},{{ text.rgb.g }},{{ text.rgb.b }}",
     "white": "{{ mantle.rgb.r }},{{ mantle.rgb.g }},{{ mantle.rgb.b }}",
     "white-on-dark": "{{ subtext0.rgb.r }},{{ subtext0.rgb.g }},{{ subtext0.rgb.b }}",
