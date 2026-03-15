@@ -1,28 +1,31 @@
 ---
 whiskers:
-    version: 2.5.0
-    matrix:
-        - accent
-        - flavor
-    filename: "themes/{{ flavor.identifier }}/catppuccin-{{ flavor.identifier }}-{{ accent }}.json"
+  version: "^2.5.0"
+  matrix:
+    - accent
+    - flavor
+  filename: "themes/{{ flavor.identifier }}/catppuccin-{{ flavor.identifier }}-{{ accent }}.json"
 ---
-{%- set palette = flavor.colors -%}
+{%- macro rgb(c) -%}
+{{ c.rgb.r }},{{ c.rgb.g }},{{ c.rgb.b }}
+{%- endmacro rgb -%}
+{%- set accent = flavor.colors[accent] -%}
 {
-  "palette:catppuccin{{ flavor.name }}{{ accent | capitalize }}:1725866092314": {
-    "name": "Catppuccin {{ flavor.name }} {{ accent | capitalize }}",
-    "black": "{{ text.rgb.r }},{{ text.rgb.g }},{{ text.rgb.b }}",
-    "white": "{{ mantle.rgb.r }},{{ mantle.rgb.g }},{{ mantle.rgb.b }}",
-    "white-on-dark": "{{ subtext0.rgb.r }},{{ subtext0.rgb.g }},{{ subtext0.rgb.b }}",
-    "navy": "{{ base.rgb.r }},{{ base.rgb.g }},{{ base.rgb.b }}",
-    "red": "{{ red.rgb.r }},{{ red.rgb.g }},{{ red.rgb.b }}",
-    "orange": "{{ peach.rgb.r }},{{ peach.rgb.g }},{{ peach.rgb.b }}",
-    "yellow": "{{ yellow.rgb.r }},{{ yellow.rgb.g }},{{ yellow.rgb.b }}",
-    "green": "{{ green.rgb.r }},{{ green.rgb.g }},{{ green.rgb.b }}",
-    "blue": "{{ sapphire.rgb.r }},{{ sapphire.rgb.g }},{{ sapphire.rgb.b }}",
-    "purple": "{{ mauve.rgb.r }},{{ mauve.rgb.g }},{{ mauve.rgb.b }}",
-    "pink": "{{ pink.rgb.r }},{{ pink.rgb.g }},{{ pink.rgb.b }}",
-    "accent": "{{ palette[accent].rgb.r }},{{ palette[accent].rgb.g }},{{ palette[accent].rgb.b }}",
-    "secondary-accent": "{{ surface0.rgb.r }},{{ surface0.rgb.g }},{{ surface0.rgb.b }}",
-    "follow": "{{ palette[accent].rgb.r }},{{ palette[accent].rgb.g }},{{ palette[accent].rgb.b }}"
+  "palette:catppuccin{{ flavor.name }}{{ accent.name }}:1725866092314": {
+    "name": "Catppuccin {{ flavor.name }} {{ accent.name }}",
+    "black": "{{ self::rgb(c=text) }}",
+    "white": "{{ self::rgb(c=mantle) }}",
+    "white-on-dark": "{{ self::rgb(c=subtext0) }}",
+    "navy": "{{ self::rgb(c=base) }}",
+    "red": "{{ self::rgb(c=red) }}",
+    "orange": "{{ self::rgb(c=peach) }}",
+    "yellow": "{{ self::rgb(c=yellow) }}",
+    "green": "{{ self::rgb(c=green) }}",
+    "blue": "{{ self::rgb(c=sapphire) }}",
+    "purple": "{{ self::rgb(c=mauve) }}",
+    "pink": "{{ self::rgb(c=pink) }}",
+    "accent": "{{ self::rgb(c=accent) }}",
+    "secondary-accent": "{{ self::rgb(c=surface0) }}",
+    "follow": "{{ self::rgb(c=accent) }}"
   }
 }
